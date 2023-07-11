@@ -7,6 +7,55 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
+    "name": "botium-crawler",
+    "version": "0.0.20",
+    "engines": {
+      "node": ">=10"
+    },
+    "bin": {
+      "botium-crawler-cli": "./bin/cli.js"
+    },
+    "scripts": {
+      "lint": "eslint \"./src/**/*.js\" index.js",
+      "lint:fix": "eslint --fix \"./src/**/*.js\" index.js",
+      "test": "npm i --no-save botium-core botium-connector-echo && mocha \"./test/**/*.spec.js\"",
+      "test:coverage": "npm i --no-save botium-core botium-connector-echo && nyc mocha \"./test/**/*.spec.js\""
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/codeforequity-at/botium-crawler.git"
+    },
+    "author": "Wizardguy210",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/codeforequity-at/botium-crawler/issues"
+    },
+    "homepage": "https://www.botium.ai",
+    "peerDependencies": {
+      "botium-core": "*"
+    },
+    "dependencies": {
+      "debug": "^4.3.2",
+      "flat": "^5.0.0",
+      "is-url": "^1.2.4",
+      "lodash": "^4.17.21",
+      "readline-sync": "^1.4.10",
+      "slugify": "^1.4.4",
+      "yargs": "^17.1.1"
+    },
+    "devDependencies": {
+      "chai": "^4.2.0",
+      "chai-as-promised": "^7.1.1",
+      "eslint": "^7.5.0",
+      "eslint-config-standard": "^14.1.1",
+      "eslint-plugin-import": "^2.22.0",
+      "eslint-plugin-node": "^11.1.0",
+      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-standard": "^4.0.1",
+      "mocha": "^8.2.1",
+      "nyc": "^15.1.0"
+    }
+  }
     "type": "git",
     "url": "git://github.com/grant/npm-crawler.git"
   },
